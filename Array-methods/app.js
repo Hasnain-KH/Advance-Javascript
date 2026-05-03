@@ -124,3 +124,20 @@
 
 
 
+
+let products = [
+    { id: 1, name: "Phone", price: 500, category: "electronics", inStock: true, rating: 4.5 },
+    { id: 2, name: "Laptop", price: 1200, category: "electronics", inStock: false, rating: 4.8 },
+    { id: 3, name: "Shirt", price: 40, category: "clothing", inStock: true, rating: 4.0 },
+    { id: 4, name: "Headphones", price: 150, category: "electronics", inStock: true, rating: 3.8 },
+    { id: 5, name: "Shoes", price: 80, category: "clothing", inStock: true, rating: 4.3 }
+];
+
+let myobj = products.filter((obj) => {
+    return obj.category === "electronics" &&
+        obj.inStock === true &&
+        obj.rating > 4
+
+})
+let stuname = myobj.map((na) => na.name)
+console.log(stuname);
