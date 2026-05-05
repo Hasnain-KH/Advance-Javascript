@@ -47,4 +47,10 @@
 // div.classList.add("div");
 // document.body.append(div);
 
+let price = 1000;
+let isMember = prompt("true or false");
+let result = isMember === "true" ? "Discounted Price: 800" : `No Discount : ${price} rupees`;
+console.log(result);
+
+
 
