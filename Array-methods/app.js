@@ -155,40 +155,81 @@
 // console.log(num);
 
 
-let cart = [
-    { name: "Phone", price: 500, quantity: 2 },
-    { name: "Laptop", price: 1000, quantity: 1 },
-    { name: "Headphones", price: 100, quantity: 3 }
-];
+// let cart = [
+//     { name: "Phone", price: 500, quantity: 2 },
+//     { name: "Laptop", price: 1000, quantity: 1 },
+//     { name: "Headphones", price: 100, quantity: 3 }
+// ];
 
-let cards = cart.reduce((acc, curr) => {
-    return acc + curr.price;
-}, 0)
-let div = document.createElement("div");
-div.append(`The Total price of Cart is : ${cards} rupees`)
-div.classList.add('div3');
-document.body.append(div);
+// let cards = cart.reduce((acc, curr) => {
+//     return acc + curr.price;
+// }, 0)
+// let div = document.createElement("div");
+// div.append(`The Total price of Cart is : ${cards} rupees`)
+// div.classList.add('div3');
+// document.body.append(div);
 
 
 // ===> find method <===
 
 
-let marks = [32, 55, 30, 40, 30, 90];
+// let marks = [32, 55, 30, 40, 30, 90];
 
-let mymarks = marks.find((ma) => {
-    return ma === 40;
+// let mymarks = marks.find((ma) => {
+//     return ma === 40;
+// })
+// console.log(mymarks);
+
+// let myprompt = prompt("Enter here a product name");
+// let product = ["laptop", "mobile", "iphone", "chair"];
+
+// let save = product.find((pro) => pro === myprompt);
+
+// let div = document.createElement("div");
+// let h2 = document.createElement("h2");
+// // div.append(h2);
+// div.classList.add("mydiv");
+// div.append(`Your ${save} is availible`);
+// document.body.append(div);
+
+
+// ===> every method <===
+
+// let cart = [
+//     { name: "Phone", price: 500, inStock: true },
+//     { name: "Laptop", price: 1000, inStock: true },
+//     { name: "Headphones", price: 100, inStock: true }
+// ];
+
+// let instock = cart.every((ins) => {
+//     if (ins.inStock !== true) {
+//         alert("Some products are out of stock. Please remove them before checkout");
+//     }
+//     else {
+//         alert("All items are availible. Proceed to checkout");
+//     }
+// });
+
+let cart = [
+    {
+        name: "Phone",
+        quantity: 2,
+        stockAvailable: 5
+    },
+    {
+        name: "Laptop",
+        quantity: 1,
+        stockAvailable: 1
+    },
+    {
+        name: "Headphones",
+        quantity: 3,
+        stockAvailable: 2
+    }
+];
+
+let data = cart.every((obj) => {
+    return obj.quantity.valueOf
 })
-console.log(mymarks);
-
-let myprompt = prompt("Enter here a product name");
-let product = ["laptop", "mobile", "iphone", "chair"];
-
-let save = product.find((pro) => pro === myprompt);
-
-let div = document.createElement("div");
-let h2 = document.createElement("h2");
-// div.append(h2);
-div.classList.add("mydiv");
-div.append(`Your ${save} is availible`);
-document.body.append(div);
+console.log(data);
 
