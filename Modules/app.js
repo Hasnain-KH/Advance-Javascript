@@ -10,11 +10,8 @@
 
 // console.log(`${firstName}  ${lastName}`);
 
-import { car } from "./math.js";
-console.log(car.model.jjk?.ll);
+// import { car } from "./math.js";
+// console.log(car.model.jjk?.ll);
 
-
-
-
-
+import { myname } from "./math.js";
 
