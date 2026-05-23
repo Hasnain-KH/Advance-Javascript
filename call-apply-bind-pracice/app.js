@@ -136,6 +136,8 @@
 // showOrder.apply(order2, ["Hasnain", "Lahore"]);
 
 
+let app2 = document.querySelector("#app");
+
 const account1 = {
     bank: "HBL",
     balance: 50000
@@ -145,12 +147,22 @@ const account2 = {
     bank: "Meezan Bank",
     balance: 120000
 };
-
-function showAccount(customerName, transactionType, amount) {
-    console.log(
-        `${customerName} performed ${transactionType} of ${amount} PKR in ${this.bank}. Current Balance: ${this.balance} - `
-    );
+const account3 = {
+    bank: "Alfalah",
+    balance: 90000
 }
 
-showAccount.apply(account1, ["Hasnain", "Deposite", 1000]);
-showAccount.apply(account2, ["Sufyan", "withdraw", 3000]);
+function showAccount(customerName, transactionType, amount) {
+
+    const card = document.createElement("div");
+
+    card.innerHTML = `
+    Customer Name is ${customerName} and transactionType is ${transactionType} and the amount is ${amount} PKR in ${this.bank}. And Now current Balance is ${this.balance};
+    `
+    app2.append(card);
+}
+
+
+showAccount.apply(account2, ["Hasnain", "Deposite", 1000]);
+showAccount.apply(account1, ["Sufyan", "Withdraw", 1000]);
+showAccount.apply(account3, ["Ayan", "Deposite", 3000]);
