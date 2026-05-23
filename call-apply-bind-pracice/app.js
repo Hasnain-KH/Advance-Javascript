@@ -106,36 +106,51 @@
 // introduce.apply(person2, ["Lahore", "Pakistan"]);
 // introduce.apply(person3, ["Multan", "Pakistan"]);
 
-const app = document.querySelector("#app");
+// const app = document.querySelector("#app");
 
-const order1 = {
-    restaurant: "multan",
-    item: "Zinger Burger"
+// const order1 = {
+//     restaurant: "multan",
+//     item: "Zinger Burger"
+// };
+
+// const order2 = {
+//     restaurant: "Quidabad",
+//     item: "Chicken Biryani"
+// };
+
+
+// function showOrder(customerName, city) {
+
+//     const card = document.createElement("div");
+
+//     card.innerHTML = `
+//     The Restaurant name is <h1>${this.restaurant}</h1>
+//     And the Item is <h1>${this.item}</h1>
+//     And The Customer Name is <h1>${customerName}</h1>
+//     And the customer city name is <h1>${city}</h1>
+//     `
+//     app.append(card);
+// }
+
+// showOrder.call(order1, "Hasnain", "Lahore");
+// showOrder.apply(order2, ["Hasnain", "Lahore"]);
+
+
+const account1 = {
+    bank: "HBL",
+    balance: 50000
 };
 
-const order2 = {
-    restaurant: "Quidabad",
-    item: "Chicken Biryani"
+const account2 = {
+    bank: "Meezan Bank",
+    balance: 120000
 };
 
-
-function showOrder(customerName, city) {
+function showAccount(customerName, transactionType, amount) {
     console.log(
-        `The name of Restaurant is ${this.restaurant} and the Item is ${this.item} and The customer name is ${customerName} , and The city name of the Customer is ${city}`
+        `${customerName} performed ${transactionType} of ${amount} PKR in ${this.bank}. Current Balance: ${this.balance} - `
     );
-
-    const card = document.createElement("div");
-
-    card.innerHTML = `
-    The Restaurant name is <h1>${this.restaurant}</h1>
-    And the Item is <h1>${this.item}</h1>
-    And The Customer Name is <h1>${customerName}</h1>
-    And the customer city name is <h1>${city}</h1>
-    `
-    app.append(card);
 }
 
-showOrder.call(order1, "Hasnain", "Lahore");
-showOrder.apply(order2, ["Hasnain", "Lahore"]);
-
-
+showAccount.apply(account1, ["Hasnain", "Deposite", 1000]);
+showAccount.apply(account2, ["Sufyan", "withdraw", 3000]);
