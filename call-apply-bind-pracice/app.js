@@ -79,25 +79,21 @@
 // enrollCourse.call(student2, "React JS", 2);
 // enrollCourse.call(student3, "web designing", 4);
 
-// apply //
+// bind //
 
-let div = document.createElement("div");
-let h1 = document.createElement("h1");
+const person = {
+    name: "Hasnain",
+    age: 20
+};
 
-div.append(h1);
-
-document.body.append(div)
-
-function showName(fathername) {
-    div.innerText = this.name + fathername;
+function introduce(city, country) {
+    console.log(
+        `My name is ${this.name}, I am ${this.age} years old. I live in ${city}, ${country}.`
+    );
 }
 
-let student = {
-    name: "hasnain "
-}
-
-showName.bind(student, ["Riaz Muhammad"]);
-
+let na = introduce.apply(person);
+na();
 
 
 
